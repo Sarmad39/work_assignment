@@ -28,7 +28,7 @@ class MyPlanScreen extends StatelessWidget {
             } else {
               return Stack(
                 children: [
-                  Container(
+                  SizedBox(
                     height: MediaQuery.of(context).size.height * 1,
                     child: Consumer<Products>(
                       builder: (ctx, productData, child) => ListView.builder(
@@ -56,29 +56,44 @@ class MyPlanScreen extends StatelessWidget {
     return Container(
       height: 80,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: Theme.of(context).colorScheme.secondary,
-        border: Border.all(width: 1,style: BorderStyle.solid,color: Colors.grey)
-      ),
+          borderRadius: BorderRadius.circular(20),
+          color: Theme.of(context).colorScheme.secondary,
+          border: Border.all(
+              width: 1, style: BorderStyle.solid, color: Colors.grey)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(
             children: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.delivery_dining,color: Colors.white,)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.delivery_dining,
+                    color: Colors.white,
+                  )),
               const Text('Delivery')
             ],
           ),
-           Column(
+          Column(
             children: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.feed,color: Colors.lightBlue,)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.feed,
+                    color: Colors.lightBlue,
+                  )),
               const Text('Plans')
             ],
           ),
-           Column(
+          Column(
             children: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.person  ,color: Colors.white,)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  )),
               const Text('Profile')
             ],
           )
@@ -95,21 +110,37 @@ class MyPlanScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:  [
+          children: [
             CircleAvatar(
               radius: 25,
-              child: Image.asset('assets/images/logo.jpg',fit: BoxFit.fill,height: 50,width: 50,),
+              child: Image.asset(
+                'assets/images/logo.jpg',
+                fit: BoxFit.fill,
+                height: 50,
+                width: 50,
+              ),
             ),
-           const Text(
+            const Text(
               'My Plans',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 25,
               ),
             ),
-            CircleAvatar(
-              radius: 25,
-              child: Image.asset('assets/images/image.png',fit: BoxFit.contain,height: 50,width: 50,),
+            Container(
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(colors: [
+                  Color.fromRGBO(146, 88, 186,1),
+                  Color.fromRGBO(6, 133, 170,1)
+                ],begin: Alignment.bottomLeft,
+                  end: Alignment.topRight),
+              ),
+              child: const CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage('assets/images/image.png'),
+                backgroundColor: Colors.transparent,
+              ),
             ),
           ],
         ),
