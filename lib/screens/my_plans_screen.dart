@@ -111,13 +111,15 @@ class MyPlanScreen extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(
-              radius: 25,
-              child: Image.asset(
-                'assets/images/logo.jpg',
-                fit: BoxFit.fill,
-                height: 50,
-                width: 50,
+           Container(
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white
+              ),
+              child: const CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage('assets/images/logo.jpg'),
+                backgroundColor: Colors.transparent,
               ),
             ),
             const Text(
