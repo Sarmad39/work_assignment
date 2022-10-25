@@ -95,12 +95,12 @@ class MyPlanScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
+          children:  [
             CircleAvatar(
               radius: 25,
-              child: Text('s'),
+              child: Image.asset('assets/images/logo.jpg',fit: BoxFit.fill,height: 50,width: 50,),
             ),
-            Text(
+           const Text(
               'My Plans',
               style: TextStyle(
                 fontWeight: FontWeight.w700,
@@ -109,7 +109,7 @@ class MyPlanScreen extends StatelessWidget {
             ),
             CircleAvatar(
               radius: 25,
-              child: Text('s'),
+              child: Image.asset('assets/images/image.png',fit: BoxFit.contain,height: 50,width: 50,),
             ),
           ],
         ),

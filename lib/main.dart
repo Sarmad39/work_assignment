@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './provider/products_provider.dart';
-import './screens/my_plans.dart';
+import 'screens/my_plans_screen.dart';
 
 void main() {
   runApp(const MyApp());
