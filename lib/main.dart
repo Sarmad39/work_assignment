@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          primaryColor: const  Color.fromARGB(255, 10, 10, 10),
+          primaryColor: const  Color.fromRGBO(17, 17, 17,1),
           colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color.fromRGBO(38, 43, 55, 1)),
           fontFamily: 'IBMPlexSans',
           textTheme: ThemeData.light().textTheme.copyWith(
