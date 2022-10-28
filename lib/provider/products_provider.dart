@@ -20,12 +20,15 @@ class Products with ChangeNotifier {
       final extractedData = json.decode(response.body) as List<dynamic>;
       final List<Product> loadedProducts = [];
       for (var productData in extractedData) {
-        loadedProducts.add(Product(
+        loadedProducts.add(
+          Product(
             id: productData['id'],
             title: productData['title'],
             date: productData['delivery_date'],
             price: productData['price'],
-            imageUrl: productData['imageUrl']));
+            imageUrl: productData['imageUrl'],
+          ),
+        );
       }
       _items = loadedProducts;
       notifyListeners();

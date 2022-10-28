@@ -13,17 +13,18 @@ class MyPlanScreen extends StatelessWidget {
       backgroundColor: Theme.of(context).primaryColor,
       body: Stack(
         children: const [
-         ProductList(),
+          ProductList(),
           Positioned(
-                      bottom: 10,
-                      left: 30,
-                      right: 30,
-                      child: BottomNavBar()),
+            bottom: 10,
+            left: 30,
+            right: 30,
+            child: BottomNavBar(),
+          ),
         ],
-      )
+      ),
     );
   }
-  
+
   PreferredSize _appbar() {
     return PreferredSize(
       preferredSize: const Size.fromHeight(100),
@@ -34,11 +35,10 @@ class MyPlanScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-             Container(
+              Container(
                 decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Color.fromRGBO(10, 10, 10, 1)
-                ),
+                    shape: BoxShape.circle,
+                    color: Color.fromRGBO(10, 10, 10, 1)),
                 child: const CircleAvatar(
                   radius: 25,
                   backgroundImage: AssetImage('assets/images/logo.jpg'),
@@ -56,10 +56,9 @@ class MyPlanScreen extends StatelessWidget {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   gradient: LinearGradient(colors: [
-                    Color.fromRGBO(146, 88, 186,1),
-                    Color.fromRGBO(6, 133, 170,1)
-                  ],begin: Alignment.bottomLeft,
-                    end: Alignment.topRight),
+                    Color.fromRGBO(146, 88, 186, 1),
+                    Color.fromRGBO(6, 133, 170, 1),
+                  ], begin: Alignment.bottomLeft, end: Alignment.topRight),
                 ),
                 child: const CircleAvatar(
                   radius: 25,
