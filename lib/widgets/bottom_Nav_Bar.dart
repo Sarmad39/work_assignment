@@ -1,14 +1,26 @@
 // ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});
 
+  Widget _buildMyButton(Icon icon, String title,) {
+    return InkWell(
+      onTap: () {},
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          icon,
+          Text(title)
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Theme.of(context).colorScheme.secondary,
@@ -21,42 +33,9 @@ class BottomNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Column(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.delivery_dining,
-                  color: Colors.white,
-                ),
-              ),
-              const Text('Delivery')
-            ],
-          ),
-          Column(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.feed,
-                  color: Colors.lightBlue,
-                ),
-              ),
-              const Text('Plans')
-            ],
-          ),
-          Column(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.person,
-                  color: Colors.white,
-                ),
-              ),
-              const Text('Profile')
-            ],
-          )
+          _buildMyButton(const Icon(Icons.delivery_dining,color: Colors.white,), "Delivery", ),
+          _buildMyButton(const Icon(Icons.feed,color: Colors.blue,) ,"Plans", ),
+          _buildMyButton(const Icon(Icons.person,color: Colors.white,), "Profile", ),
         ],
       ),
     );

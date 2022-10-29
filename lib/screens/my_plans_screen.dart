@@ -48,6 +48,7 @@ class MyPlanScreen extends StatelessWidget {
               const Text(
                 'My Plans',
                 style: TextStyle(
+                  color: Colors.white,
                   fontWeight: FontWeight.w700,
                   fontSize: 25,
                 ),
