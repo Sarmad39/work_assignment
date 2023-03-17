@@ -24,10 +24,7 @@ class BottomNavBar extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Theme.of(context).colorScheme.secondary,
-        border: Border.all(
-          width: 1,
-          style: BorderStyle.solid,
-        ),
+       
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,

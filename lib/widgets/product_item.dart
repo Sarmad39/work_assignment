@@ -53,7 +53,7 @@ class ProductItem extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: -30,
+              right: 0,
               child: SizedBox(
                 height: 150,
                 child: Image.network(
